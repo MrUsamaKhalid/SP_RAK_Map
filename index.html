@@ -460,12 +460,13 @@ html, body {
 
 .mk-icon { font-size:16px; line-height:1; filter:grayscale(0.1); }
 
-.mk-growth { font-size:10px; font-weight:600; color:var(--gold); margin-top:4px; white-space:nowrap; }
+.mk-growth { font-size:10px; font-weight:600; color:var(--gold); padding-top:4px; margin-top:0; white-space:nowrap; }
 .mk-dot.villa ~ .mk-growth { color:var(--teal); }
 .mk-dot.ultra ~ .mk-growth { color:var(--rose); }
 
-.mk-label { font-size:8.5px; font-weight:600; color:var(--text-secondary); margin-top:1px; white-space:nowrap; letter-spacing:0.3px; }
+.mk-label { font-size:8.5px; font-weight:600; color:var(--text-secondary); padding-top:1px; margin-top:0; white-space:nowrap; letter-spacing:0.3px; }
 .mk-dimmed { opacity:0.15 !important; pointer-events:none; transition:opacity 0.3s; }
+.mk-dimmed .mk-dot, .mk-dimmed .mk-growth, .mk-dimmed .mk-label { pointer-events:none; }
 
 /* ═══════════════════════════════════════
    RIGHT DETAIL PANEL
@@ -975,7 +976,7 @@ html, body {
   0%, 100% { transform:scale(1); filter:drop-shadow(0 0 0 rgba(0,0,0,0)); }
   50% { transform:scale(1.06); filter:drop-shadow(0 0 8px var(--accent-ring)); }
 }
-.mk-aff-match .mk { animation:affPulse 1.6s ease-in-out infinite; }
+.mk-aff-match .mk-dot { animation:affPulse 1.6s ease-in-out infinite; }
 
 /* Topbar chip when affordability filter active */
 .aff-chip {
@@ -2506,11 +2507,11 @@ html, body {
             </div>
             <div class="calc-row">
               <label>Down Payment Available (AED)</label>
-              <input type="range" id="aff-cash" min="100000" max="5000000" step="50000" value="600000" oninput="renderAffordabilityTab()">
+              <input type="range" id="aff-cash" min="100000" max="7500000" step="50000" value="600000" oninput="renderAffordabilityTab()">
               <div style="display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:var(--text-muted);margin-top:4px;">
                 <span>AED 100K</span>
                 <span id="aff-cash-val" style="color:var(--gold);font-weight:700;font-size:13px">AED 600,000</span>
-                <span>AED 5M</span>
+                <span>AED 7.5M</span>
               </div>
             </div>
             <div class="calc-row" id="aff-rate-row">
@@ -2707,7 +2708,7 @@ const AREAS = [
     "lng": 55.755,
     "island": "Island 3 – Dream (reclaimed extension)",
     "developer": "Wynn Resorts × Marjan",
-    "launch": "2022",
+    "launch": "2023",
     "freehold": true,
     "handover": "Opening early 2027",
     "launchP": 3000,
@@ -4119,17 +4120,17 @@ buildMarkers();
    HEATMAP
 ═══════════════════════════════════════ */
 let heatLayer = null;
+function rebuildHeatLayer() {
+  if (heatLayer) { map.removeLayer(heatLayer); heatLayer = null; }
+  if (!App.heatmapOn) return;
+  const maxP = Math.max(...AREAS.map(a => a.curP));
+  const pts = AREAS.map(a => [a.lat, a.lng, a.curP / maxP]);
+  heatLayer = L.heatLayer(pts, { radius:45, blur:35, maxZoom:14, gradient:{0.2:'#3ecfcf',0.5:'#6b6b6b',0.8:'#a0a0a0',1:'#e07a5f'} }).addTo(map);
+}
 function toggleHeatmap() {
   App.heatmapOn = !App.heatmapOn;
   document.getElementById('heatmap-toggle').classList.toggle('active', App.heatmapOn);
-  if (App.heatmapOn) {
-    const maxP = Math.max(...AREAS.map(a => a.curP));
-    const pts = AREAS.map(a => [a.lat, a.lng, a.curP / maxP]);
-    heatLayer = L.heatLayer(pts, { radius:45, blur:35, maxZoom:14, gradient:{0.2:'#3ecfcf',0.5:'#6b6b6b',0.8:'#a0a0a0',1:'#e07a5f'} }).addTo(map);
-  } else if (heatLayer) {
-    map.removeLayer(heatLayer);
-    heatLayer = null;
-  }
+  rebuildHeatLayer();
 }
 
 /* ═══════════════════════════════════════
@@ -4740,7 +4741,7 @@ function renderMortgageTab() {
   ];
   if (!isCash) {
     cashRows.push({ lbl:'Mortgage Registration', sub:'0.25% of loan + AED 290', val:c.mortgageReg,
-      tip:'Cost to register your mortgage with the RAK Municipality Land Department. 0.25% of the loan amount plus a fixed AED 290 fee (same schedule as Dubai).' });
+      tip:'Cost to register your mortgage with the RAK Municipality Land Department. 0.25% of the loan amount plus a fixed AED 290 fee.' });
     cashRows.push({ lbl:'Bank Processing Fee', sub:'1% of loan (cap AED 8K)', val:c.bankFee,
       tip:'One-time processing charge from your bank for arranging the mortgage. Typically 1% of the loan amount, capped at AED 8,000.' });
     cashRows.push({ lbl:'Property Valuation', sub:'Estimate', val:c.valuation,
@@ -5914,30 +5915,74 @@ function applyCitywide(cw, meta) {
   }
 }
 updateOverlayStats();
+function isValidZone(z) {
+  return !!z && typeof z.id === 'string' && typeof z.name === 'string' && typeof z.code === 'string' &&
+    typeof z.developer === 'string' && typeof z.launch === 'string' && typeof z.pinType === 'string' &&
+    typeof z.type === 'string' && typeof z.growth === 'string' && typeof z.yield_ === 'string' &&
+    typeof z.yoy === 'string' && typeof z.supplyNote === 'string' &&
+    typeof z.lat === 'number' && typeof z.lng === 'number' &&
+    typeof z.launchP === 'number' && typeof z.curP === 'number' && typeof z.growthPct === 'number' &&
+    Array.isArray(z.timeline) && z.timeline.every(t => !!t && typeof t.y === 'string' && typeof t.p === 'number') &&
+    Array.isArray(z.signals) && Array.isArray(z.units) && Array.isArray(z.drivers);
+}
+function rebuildFromZones() {
+  computeHeatScores();
+  buildMarkers();
+  buildTicker();
+  buildFeed(App.currentTab);
+  const mortSel = document.getElementById('mort-area');
+  if (mortSel) {
+    const prev = mortSel.value;
+    mortSel.innerHTML = '';
+    renderMortgageTab();
+    if (prev && AREAS.some(a => a.id === prev)) mortSel.value = prev;
+  }
+  initCalc();
+  updateOverlayStats();
+  updateMarkerDimming();
+  rebuildHeatLayer();
+  if (playbackActive) {
+    const slider = document.getElementById('pb-slider');
+    const maxLen = Math.max(...AREAS.map(a => a.timeline.length));
+    slider.max = maxLen - 1;
+    if (+slider.value > maxLen - 1) slider.value = maxLen - 1;
+    onPlaybackChange(slider.value);
+  }
+  if (App.activeId && rakData.getZone(App.activeId)) selectArea(App.activeId);
+  else if (App.activeId) clearDetail();
+}
 (async function loadRakData() {
+  let j;
   try {
     const res = await fetch('data/rak/almarjan.json', { cache: 'no-store' });
     if (!res.ok) throw new Error('HTTP ' + res.status);
-    const j = await res.json();
-    rakData.citywide = j.citywide || null;
-    rakData.meta = j.meta || null;
-    if (Array.isArray(j.zones) && j.zones.length) {
-      AREAS.length = 0;
-      AREAS.push(...j.zones);
-      computeHeatScores();
-      buildMarkers();
-      buildTicker();
-      buildFeed(App.currentTab);
-      const mortSel = document.getElementById('mort-area');
-      if (mortSel) mortSel.innerHTML = '';
-      initCalc();
-      updateOverlayStats();
-      if (App.activeId && rakData.getZone(App.activeId)) selectArea(App.activeId);
-      else if (App.activeId) clearDetail();
-    }
-    if (j.citywide) applyCitywide(j.citywide, j.meta || null);
+    j = await res.json();
   } catch (e) {
     /* fetch unavailable (e.g. file://) — inline fallback data is already rendered */
+    return;
+  }
+  rakData.citywide = j.citywide || null;
+  rakData.meta = j.meta || null;
+  /* as-of labels first, so any panel re-render below uses the JSON vintage */
+  if (j.citywide) applyCitywide(j.citywide, j.meta || null);
+  if (!Array.isArray(j.zones) || !j.zones.length) return;
+  if (!j.zones.every(isValidZone)) {
+    console.warn('almarjan.json: zone shape invalid — keeping inline fallback data');
+    return;
+  }
+  /* computeHeatScores() stamps heatScore onto the live zones — strip it to compare */
+  const norm = zs => JSON.stringify(zs, (k, v) => k === 'heatScore' ? undefined : v);
+  if (norm(j.zones) === norm(AREAS)) return; /* byte-equal fallback — nothing to rebuild */
+  const prevZones = AREAS.slice();
+  try {
+    AREAS.length = 0;
+    AREAS.push(...j.zones);
+    rebuildFromZones();
+  } catch (e) {
+    console.warn('almarjan.json rebuild failed — restoring inline data:', e);
+    AREAS.length = 0;
+    AREAS.push(...prevZones);
+    try { rebuildFromZones(); } catch (e2) { console.error('inline data rebuild failed:', e2); }
   }
 })();
 </script>
