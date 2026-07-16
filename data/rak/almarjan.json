@@ -45,6 +45,7 @@
       "name": "Wynn Resort District",
       "type": "Resort District",
       "pinType": "ultra",
+      "landmark": true,
       "code": "WYN",
       "lat": 25.6875,
       "lng": 55.755,
