@@ -1,0 +1,1343 @@
+{
+  "meta": {
+    "project": "Al Marjan Island Property Intelligence",
+    "emirate": "Ras Al Khaimah",
+    "citywide_as_of": "Q1 2026",
+    "projects_as_of": "Mid-2026",
+    "updated": "2026-07-16",
+    "refresh_cadence": "quarterly (manual)",
+    "sources": [
+      "ValuStrat Price Index (VPI) — Ras Al Khaimah, Q1 2026 review",
+      "Reliant Surveyors — RAK Property Market Insights Q1 2026",
+      "Totality Estates — Al Marjan Island price & yield analyses 2025–26",
+      "Aark Developers 2026 price guide; Khaleej Times (branded residences)",
+      "Developer & broker published pricing (Metropolitan, Property Finder, insiderealty.ae, opr.ae, dxboffplan)"
+    ],
+    "disclaimer": "Curated dataset. Ras Al Khaimah publishes no open transaction registry equivalent to Dubai's DLD, so figures are listing/asking-price based unless noted. Off-plan prices are developer/broker asking prices; yields on off-plan are projections, not actuals. Values marked (est.) are interpolated or estimated and pending primary-source verification."
+  },
+  "citywide": {
+    "island": "Al Marjan Island",
+    "emirate": "Ras Al Khaimah",
+    "avg_per_sqft_aed": 2645,
+    "yoy_growth_pct": 21,
+    "txn_growth_since_wynn_pct": 340,
+    "foreign_buyer_pct": 62,
+    "vpi_index": 124.1,
+    "vpi_base": "Q1 2024 = 100",
+    "vpi_yoy_pct": 9.3,
+    "rak_apartment_psf_aed": 2303,
+    "rak_villa_psf_aed": 1382,
+    "offplan_pct": 84,
+    "sale_listings": 10378,
+    "share_of_rak_listings_pct": 55.1,
+    "as_of": "Q1 2026",
+    "source_note": "ValuStrat VPI + Reliant Surveyors + published market reports",
+    "wynn": {
+      "investment_usd_bn": 5.1,
+      "keys": 1530,
+      "opening": "Early 2027",
+      "status": "Tower topped out 2025; gaming licence granted Oct 2023"
+    }
+  },
+  "zones": [
+    {
+      "id": "wynn",
+      "name": "Wynn Resort District",
+      "type": "Resort District",
+      "pinType": "ultra",
+      "code": "WYN",
+      "lat": 25.6875,
+      "lng": 55.755,
+      "island": "Island 3 – Dream (reclaimed extension)",
+      "developer": "Wynn Resorts × Marjan",
+      "launch": "2022",
+      "freehold": true,
+      "handover": "Opening early 2027",
+      "launchP": 3000,
+      "curP": 4800,
+      "growth": "+60%",
+      "growthPct": 60,
+      "yoy": "+21% (island avg)",
+      "yield_": "7–8% (STR proj.)",
+      "yearsLive": 3,
+      "appreciation": "AED 3,000 → 4,800/sqft branded (2023→2026)",
+      "cagr": "~17% annualised (branded segment, est.)",
+      "supplyNote": "USD 5.1B resort · 1,530 keys · UAE’s first gaming licence · limited adjacent plots",
+      "drivers": [
+        "UAE’s first commercial gaming resort — licence granted Oct 2023",
+        "Tower topped out 2025; opening early 2027",
+        "Scarce plots adjacent to the resort district"
+      ],
+      "signals": [
+        {
+          "icon": "🎰",
+          "text": "Gaming Licence",
+          "val": "Granted Oct 2023",
+          "cls": "gold"
+        },
+        {
+          "icon": "📅",
+          "text": "Wynn Opening",
+          "val": "Early 2027",
+          "cls": "gold"
+        },
+        {
+          "icon": "💰",
+          "text": "Investment",
+          "val": "USD 5.1B",
+          "cls": "rose"
+        },
+        {
+          "icon": "📈",
+          "text": "Branded PSF 2023–26",
+          "val": "+60%",
+          "cls": "up"
+        }
+      ],
+      "timeline": [
+        {
+          "y": "2023 Branded launches",
+          "p": 3000
+        },
+        {
+          "y": "2024",
+          "p": 3900,
+          "chg": "+30% (est.)"
+        },
+        {
+          "y": "2025 Topped out",
+          "p": 4300,
+          "chg": "+10% (est.)"
+        },
+        {
+          "y": "Mid-2026",
+          "p": 4800,
+          "chg": "+12%",
+          "cur": true
+        }
+      ],
+      "units": [
+        {
+          "t": "Resort Keys",
+          "p": "1,530"
+        },
+        {
+          "t": "Investment",
+          "p": "USD 5.1B"
+        },
+        {
+          "t": "Opening",
+          "p": "Early 2027"
+        },
+        {
+          "t": "Branded Resale",
+          "p": "~AED 4,800/sqft"
+        }
+      ],
+      "source_note": "Branded psf trajectory: Khaleej Times (AED 3,000 launch → ~4,800 resale); Wynn facts: wynnalmarjanisland.com, Gulf News, iGB. 2024/2025 points interpolated (est.)."
+    },
+    {
+      "id": "oceano",
+      "name": "Oceano",
+      "type": "Ultra-Luxury Residences",
+      "pinType": "ultra",
+      "code": "OCE",
+      "lat": 25.6955,
+      "lng": 55.7352,
+      "island": "Island 4 – View (apex)",
+      "developer": "The Luxe Developers",
+      "launch": "2022",
+      "freehold": true,
+      "handover": "Q3 2026",
+      "launchP": 1800,
+      "curP": 2856,
+      "growth": "+59%",
+      "growthPct": 59,
+      "yoy": "+21% (island avg)",
+      "yield_": "6–8% (proj.)",
+      "yearsLive": 4,
+      "appreciation": "+59% since 2022 launch (est.)",
+      "cagr": "~12% annualised (est.)",
+      "supplyNote": "206 units incl. 6 duplex penthouses & 2 sky villas · sister tower The Stellar (2025)",
+      "drivers": [
+        "First major post-Wynn off-plan launch (2022)",
+        "Twin-tower design at the apex of View Island",
+        "Handover Q3 2026 — earliest new-generation delivery"
+      ],
+      "signals": [
+        {
+          "icon": "🗓️",
+          "text": "Handover",
+          "val": "Q3 2026",
+          "cls": "gold"
+        },
+        {
+          "icon": "📈",
+          "text": "Since 2022 Launch",
+          "val": "+59% (est.)",
+          "cls": "up"
+        },
+        {
+          "icon": "🌊",
+          "text": "Rental Yield",
+          "val": "6–8% (proj.)",
+          "cls": "gold"
+        },
+        {
+          "icon": "🏗️",
+          "text": "Status",
+          "val": "Final finishing",
+          "cls": "gold"
+        }
+      ],
+      "timeline": [
+        {
+          "y": "2022 Launch",
+          "p": 1800
+        },
+        {
+          "y": "2023",
+          "p": 2100,
+          "chg": "+17% (est.)"
+        },
+        {
+          "y": "2024",
+          "p": 2400,
+          "chg": "+14% (est.)"
+        },
+        {
+          "y": "2025",
+          "p": 2650,
+          "chg": "+10% (est.)"
+        },
+        {
+          "y": "Mid-2026",
+          "p": 2856,
+          "chg": "+8%",
+          "cur": true
+        }
+      ],
+      "units": [
+        {
+          "t": "1-BR",
+          "p": "AED 2.4–2.6M"
+        },
+        {
+          "t": "2-BR",
+          "p": "AED 4.5M+ (est.)"
+        },
+        {
+          "t": "Duplex Penthouse",
+          "p": "POA"
+        },
+        {
+          "t": "Service Chg",
+          "p": "AED 16–20/sqft (est.)"
+        }
+      ],
+      "source_note": "Current 1BR pricing ~AED 2,856/sqft: Metropolitan Premium Properties (Jul 2026). Launch psf and intermediate years estimated."
+    },
+    {
+      "id": "nikki",
+      "name": "Nikki Beach & Rosso Bay",
+      "type": "Branded Beach Residences",
+      "pinType": "ultra",
+      "code": "NKB",
+      "lat": 25.6668,
+      "lng": 55.744,
+      "island": "Island 2 – Treasure (south beachfront)",
+      "developer": "Aldar Properties",
+      "launch": "2024",
+      "freehold": true,
+      "handover": "2028",
+      "launchP": 2000,
+      "curP": 2400,
+      "growth": "+20%",
+      "growthPct": 20,
+      "yoy": "+21% (island avg)",
+      "yield_": "6–8% (proj.)",
+      "yearsLive": 2,
+      "appreciation": "+20% since 2024 launch (est.)",
+      "cagr": "~10% annualised (est.)",
+      "supplyNote": "Two Aldar projects, one beachfront plot · sold out at launch",
+      "drivers": [
+        "Aldar’s flagship Ras Al Khaimah beachfront entry",
+        "Nikki Beach branded resort & residences",
+        "Sold out at launch — resale-premium market"
+      ],
+      "signals": [
+        {
+          "icon": "🏖️",
+          "text": "Launch Status",
+          "val": "Sold out 2024",
+          "cls": "gold"
+        },
+        {
+          "icon": "📈",
+          "text": "Resale Premium",
+          "val": "+20% (est.)",
+          "cls": "up"
+        },
+        {
+          "icon": "🗓️",
+          "text": "Handover",
+          "val": "2028",
+          "cls": "gold"
+        },
+        {
+          "icon": "💳",
+          "text": "Payment Plan",
+          "val": "10/50/40",
+          "cls": "gold"
+        }
+      ],
+      "timeline": [
+        {
+          "y": "2024 Launch",
+          "p": 2000
+        },
+        {
+          "y": "2025",
+          "p": 2200,
+          "chg": "+10% (est.)"
+        },
+        {
+          "y": "Mid-2026",
+          "p": 2400,
+          "chg": "+9% (est.)",
+          "cur": true
+        }
+      ],
+      "units": [
+        {
+          "t": "1-BR",
+          "p": "from AED 1.9M (launch)"
+        },
+        {
+          "t": "2-BR",
+          "p": "from AED 2.8M"
+        },
+        {
+          "t": "3-BR",
+          "p": "from AED 4.5M"
+        },
+        {
+          "t": "Handover",
+          "p": "2028"
+        }
+      ],
+      "source_note": "Launch grid AED 1.9M/2.8M/4.5M and ~AED 1,960–2,100/sqft: insiderealty.ae. Current resale premium estimated — Aldar resale data not published."
+    },
+    {
+      "id": "address",
+      "name": "Address Residences Al Marjan",
+      "type": "Branded Residences",
+      "pinType": "apt",
+      "code": "ADR",
+      "lat": 25.6938,
+      "lng": 55.74,
+      "island": "Island 4 – View (north)",
+      "developer": "Emaar",
+      "launch": "2025",
+      "freehold": true,
+      "handover": "Q4 2028",
+      "launchP": 2350,
+      "curP": 2450,
+      "growth": "+4%",
+      "growthPct": 4,
+      "yoy": "+21% (island avg)",
+      "yield_": "6–7% (proj.)",
+      "yearsLive": 1,
+      "appreciation": "+4% since 2025 launch (est.)",
+      "cagr": "Launch phase — too early",
+      "supplyNote": "Emaar’s first Al Marjan project · Address-branded management",
+      "drivers": [
+        "Emaar + Address brand premium",
+        "Accessible branded entry from AED 1.74M",
+        "80/20 payment plan with 10% down"
+      ],
+      "signals": [
+        {
+          "icon": "🏨",
+          "text": "Brand",
+          "val": "Address by Emaar",
+          "cls": "gold"
+        },
+        {
+          "icon": "🗓️",
+          "text": "Handover",
+          "val": "Q4 2028",
+          "cls": "gold"
+        },
+        {
+          "icon": "💳",
+          "text": "Payment Plan",
+          "val": "80/20 · 10% down",
+          "cls": "gold"
+        },
+        {
+          "icon": "💸",
+          "text": "Entry Price",
+          "val": "AED 1.74M",
+          "cls": "up"
+        }
+      ],
+      "timeline": [
+        {
+          "y": "2025 Launch",
+          "p": 2350
+        },
+        {
+          "y": "Mid-2026",
+          "p": 2450,
+          "chg": "+4% (est.)",
+          "cur": true
+        }
+      ],
+      "units": [
+        {
+          "t": "1-BR",
+          "p": "from AED 1.74M"
+        },
+        {
+          "t": "2-BR",
+          "p": "AED 2.9M+ (est.)"
+        },
+        {
+          "t": "Townhouse / PH",
+          "p": "POA"
+        },
+        {
+          "t": "Handover",
+          "p": "Q4 2028"
+        }
+      ],
+      "source_note": "Entry from AED 1.74–1.8M: opr.ae / emaar.com. PSF derived from typical 1BR sizing; movement since launch estimated."
+    },
+    {
+      "id": "playa",
+      "name": "Playa Del Sol",
+      "type": "Waterfront Apartments",
+      "pinType": "apt",
+      "code": "PDS",
+      "lat": 25.6765,
+      "lng": 55.742,
+      "island": "Island 2 – Treasure",
+      "developer": "Ellington Properties",
+      "launch": "2024",
+      "freehold": true,
+      "handover": "Q4 2027",
+      "launchP": 2400,
+      "curP": 2683,
+      "growth": "+12%",
+      "growthPct": 12,
+      "yoy": "+21% (island avg)",
+      "yield_": "6–8% (proj.)",
+      "yearsLive": 2,
+      "appreciation": "+12% since 2024 launch (est.)",
+      "cagr": "~6% annualised (est.)",
+      "supplyNote": "Ellington’s Treasure Island debut · studios to 3-BR",
+      "drivers": [
+        "Ellington design-led quality at island scale",
+        "Studios from AED 1.1M — accessible entry point",
+        "Q4 2027 handover into Wynn-opening demand"
+      ],
+      "signals": [
+        {
+          "icon": "☀️",
+          "text": "Entry Price",
+          "val": "AED 1.1M studio",
+          "cls": "up"
+        },
+        {
+          "icon": "🗓️",
+          "text": "Handover",
+          "val": "Q4 2027",
+          "cls": "gold"
+        },
+        {
+          "icon": "📈",
+          "text": "Since Launch",
+          "val": "+12% (est.)",
+          "cls": "up"
+        },
+        {
+          "icon": "🌊",
+          "text": "Rental Yield",
+          "val": "6–8% (proj.)",
+          "cls": "gold"
+        }
+      ],
+      "timeline": [
+        {
+          "y": "2024 Launch",
+          "p": 2400
+        },
+        {
+          "y": "2025",
+          "p": 2550,
+          "chg": "+6% (est.)"
+        },
+        {
+          "y": "Mid-2026",
+          "p": 2683,
+          "chg": "+5% (est.)",
+          "cur": true
+        }
+      ],
+      "units": [
+        {
+          "t": "Studio",
+          "p": "from AED 1.1M"
+        },
+        {
+          "t": "1-BR",
+          "p": "AED 1.7M+ (est.)"
+        },
+        {
+          "t": "2-BR",
+          "p": "AED 2.9M+ (est.)"
+        },
+        {
+          "t": "Handover",
+          "p": "Q4 2027"
+        }
+      ],
+      "source_note": "Studio from AED 1.1M / 410 sqft ≈ 2,683/sqft: al-marjan-properties.com. Launch psf estimated."
+    },
+    {
+      "id": "costa",
+      "name": "Costa Mare",
+      "type": "Waterfront Apartments",
+      "pinType": "apt",
+      "code": "CMR",
+      "lat": 25.6738,
+      "lng": 55.7468,
+      "island": "Island 2 – Treasure (plot 13)",
+      "developer": "Ellington Properties",
+      "launch": "2025",
+      "freehold": true,
+      "handover": "Q4 2027–2028",
+      "launchP": 2900,
+      "curP": 3046,
+      "growth": "+5%",
+      "growthPct": 5,
+      "yoy": "+21% (island avg)",
+      "yield_": "6–8% (proj.)",
+      "yearsLive": 1,
+      "appreciation": "+5% since 2025 launch (est.)",
+      "cagr": "Launch phase — too early",
+      "supplyNote": "Beachfront towers · later phases may run to 2028",
+      "drivers": [
+        "Ellington’s second Al Marjan project",
+        "Beachfront plot on Treasure Island",
+        "Handover window spans the Wynn opening"
+      ],
+      "signals": [
+        {
+          "icon": "🌅",
+          "text": "Entry Price",
+          "val": "AED 1.2M",
+          "cls": "up"
+        },
+        {
+          "icon": "🗓️",
+          "text": "Handover",
+          "val": "Q4 2027–2028",
+          "cls": "gold"
+        },
+        {
+          "icon": "📐",
+          "text": "From 394 sqft",
+          "val": "~AED 3,046/sqft",
+          "cls": "gold"
+        },
+        {
+          "icon": "🌊",
+          "text": "Rental Yield",
+          "val": "6–8% (proj.)",
+          "cls": "gold"
+        }
+      ],
+      "timeline": [
+        {
+          "y": "2025 Launch",
+          "p": 2900
+        },
+        {
+          "y": "Mid-2026",
+          "p": 3046,
+          "chg": "+5% (est.)",
+          "cur": true
+        }
+      ],
+      "units": [
+        {
+          "t": "Studio",
+          "p": "from AED 1.2M"
+        },
+        {
+          "t": "1-BR",
+          "p": "AED 1.9M+ (est.)"
+        },
+        {
+          "t": "2-BR",
+          "p": "AED 3.2M+ (est.)"
+        },
+        {
+          "t": "Handover",
+          "p": "Q4 2027–28"
+        }
+      ],
+      "source_note": "From AED 1.2M / 394 sqft ≈ 3,046/sqft: al-marjan-properties.com. Launch psf estimated."
+    },
+    {
+      "id": "lamer",
+      "name": "La Mer by Elie Saab",
+      "type": "Designer Branded Residences",
+      "pinType": "ultra",
+      "code": "LMS",
+      "lat": 25.6695,
+      "lng": 55.749,
+      "island": "Island 2 – Treasure (east)",
+      "developer": "ARTE Developments",
+      "launch": "2024",
+      "freehold": true,
+      "handover": "Q1 2028",
+      "launchP": 2000,
+      "curP": 2200,
+      "growth": "+10%",
+      "growthPct": 10,
+      "yoy": "+21% (island avg)",
+      "yield_": "6–8% (proj.)",
+      "yearsLive": 2,
+      "appreciation": "+10% since 2024 launch (est.)",
+      "cagr": "~5% annualised (est.)",
+      "supplyNote": "3 towers, 355 units · 874–14,484 sqft",
+      "drivers": [
+        "Elie Saab designer branding",
+        "Low entry price vs branded peers",
+        "50/50 plan with 10% down payment"
+      ],
+      "signals": [
+        {
+          "icon": "👗",
+          "text": "Designer",
+          "val": "Elie Saab",
+          "cls": "rose"
+        },
+        {
+          "icon": "🗓️",
+          "text": "Handover",
+          "val": "Q1 2028",
+          "cls": "gold"
+        },
+        {
+          "icon": "💳",
+          "text": "Payment Plan",
+          "val": "50/50 · 10% down",
+          "cls": "gold"
+        },
+        {
+          "icon": "📈",
+          "text": "Since Launch",
+          "val": "+10% (est.)",
+          "cls": "up"
+        }
+      ],
+      "timeline": [
+        {
+          "y": "2024 Launch",
+          "p": 2000
+        },
+        {
+          "y": "2025",
+          "p": 2100,
+          "chg": "+5% (est.)"
+        },
+        {
+          "y": "Mid-2026",
+          "p": 2200,
+          "chg": "+5% (est.)",
+          "cur": true
+        }
+      ],
+      "units": [
+        {
+          "t": "1-BR",
+          "p": "from AED 1.9M"
+        },
+        {
+          "t": "2-BR",
+          "p": "AED 3.4M+ (est.)"
+        },
+        {
+          "t": "Villas / PH",
+          "p": "to 14,484 sqft"
+        },
+        {
+          "t": "Handover",
+          "p": "Q1 2028"
+        }
+      ],
+      "source_note": "1BR from ~AED 1.9M, 874+ sqft ≈ ~2,170/sqft: insiderealty.ae, Property Finder. Movement estimated."
+    },
+    {
+      "id": "shoreline",
+      "name": "DAMAC Shoreline",
+      "type": "Waterfront Apartments & TH",
+      "pinType": "apt",
+      "code": "SHL",
+      "lat": 25.6858,
+      "lng": 55.742,
+      "island": "Island 4 – View (east)",
+      "developer": "DAMAC Properties",
+      "launch": "2025",
+      "freehold": true,
+      "handover": "Q3 2028",
+      "launchP": 2200,
+      "curP": 2300,
+      "growth": "+5%",
+      "growthPct": 5,
+      "yoy": "+21% (island avg)",
+      "yield_": "6–8% (proj.)",
+      "yearsLive": 1,
+      "appreciation": "+5% since 2025 launch (est.)",
+      "cagr": "Launch phase — too early",
+      "supplyNote": "1–3BR apartments + 4–5BR townhouses · 70/30 plan",
+      "drivers": [
+        "DAMAC’s first Ras Al Khaimah project",
+        "Mix of apartments and 4–5BR townhouses",
+        "View Island beachfront near the Wynn district"
+      ],
+      "signals": [
+        {
+          "icon": "🌴",
+          "text": "Entry Price",
+          "val": "AED 1.83M",
+          "cls": "up"
+        },
+        {
+          "icon": "🏠",
+          "text": "4-BR Townhouses",
+          "val": "from AED 6.4M",
+          "cls": "gold"
+        },
+        {
+          "icon": "🗓️",
+          "text": "Handover",
+          "val": "Q3 2028",
+          "cls": "gold"
+        },
+        {
+          "icon": "💳",
+          "text": "Payment Plan",
+          "val": "70/30",
+          "cls": "gold"
+        }
+      ],
+      "timeline": [
+        {
+          "y": "2025 Launch",
+          "p": 2200
+        },
+        {
+          "y": "Mid-2026",
+          "p": 2300,
+          "chg": "+5% (est.)",
+          "cur": true
+        }
+      ],
+      "units": [
+        {
+          "t": "1-BR",
+          "p": "from AED 1.83M"
+        },
+        {
+          "t": "2/3-BR",
+          "p": "AED 2.9M+ (est.)"
+        },
+        {
+          "t": "4-BR TH",
+          "p": "from AED 6.4M"
+        },
+        {
+          "t": "Handover",
+          "p": "Q3 2028"
+        }
+      ],
+      "source_note": "Apts from AED 1.83M, 4BR TH from 6.4M, Q3 2028: insiderealty.ae / damacproperties.com. PSF estimated from typical sizing."
+    },
+    {
+      "id": "astera",
+      "name": "The Astera (Aston Martin)",
+      "type": "Branded Residences",
+      "pinType": "ultra",
+      "code": "AST",
+      "lat": 25.6898,
+      "lng": 55.7448,
+      "island": "Island 4 – View (north-east)",
+      "developer": "Dar Global",
+      "launch": "2024",
+      "freehold": true,
+      "handover": "Dec 2028",
+      "launchP": 2300,
+      "curP": 2400,
+      "growth": "+4%",
+      "growthPct": 4,
+      "yoy": "+21% (island avg)",
+      "yield_": "6–7% (proj.)",
+      "yearsLive": 2,
+      "appreciation": "+4% since 2024 launch (est.)",
+      "cagr": "Launch phase — too early",
+      "supplyNote": "19 storeys, 260 units · 667–2,863 sqft",
+      "drivers": [
+        "Aston Martin designed interiors",
+        "View Island position facing the Wynn resort",
+        "80/20 payment plan"
+      ],
+      "signals": [
+        {
+          "icon": "🏎️",
+          "text": "Interiors",
+          "val": "Aston Martin",
+          "cls": "rose"
+        },
+        {
+          "icon": "🗓️",
+          "text": "Handover",
+          "val": "Dec 2028",
+          "cls": "gold"
+        },
+        {
+          "icon": "💳",
+          "text": "Payment Plan",
+          "val": "80/20",
+          "cls": "gold"
+        },
+        {
+          "icon": "📈",
+          "text": "Since Launch",
+          "val": "+4% (est.)",
+          "cls": "up"
+        }
+      ],
+      "timeline": [
+        {
+          "y": "2024 Launch",
+          "p": 2300
+        },
+        {
+          "y": "2025",
+          "p": 2350,
+          "chg": "+2% (est.)"
+        },
+        {
+          "y": "Mid-2026",
+          "p": 2400,
+          "chg": "+2% (est.)",
+          "cur": true
+        }
+      ],
+      "units": [
+        {
+          "t": "1-BR",
+          "p": "from AED 1.8M"
+        },
+        {
+          "t": "2-BR",
+          "p": "AED 3.3M+ (est.)"
+        },
+        {
+          "t": "3-BR TH",
+          "p": "from AED 8.4M"
+        },
+        {
+          "t": "Handover",
+          "p": "Dec 2028"
+        }
+      ],
+      "source_note": "1BR from AED 1.8M, 3BR TH from 8.4M, Dec 2028: darglobal.co.uk / everhomes.ae. PSF estimated."
+    },
+    {
+      "id": "oystra",
+      "name": "Oystra (Zaha Hadid)",
+      "type": "Ultra-Luxury Designer Residences",
+      "pinType": "ultra",
+      "code": "OYS",
+      "lat": 25.681,
+      "lng": 55.7382,
+      "island": "Island 2 – Treasure (north, facing Wynn)",
+      "developer": "Richmind",
+      "launch": "2025",
+      "freehold": true,
+      "handover": "Q1 2029",
+      "launchP": 3300,
+      "curP": 3400,
+      "growth": "+3%",
+      "growthPct": 3,
+      "yoy": "+21% (island avg)",
+      "yield_": "6–8% (proj.)",
+      "yearsLive": 1,
+      "appreciation": "+3% since 2025 launch (est.)",
+      "cagr": "Launch phase — too early",
+      "supplyNote": "4 sculpted buildings · 1–3BR + penthouses & villas · design by Zaha Hadid Architects",
+      "drivers": [
+        "Zaha Hadid Architects sculptural design",
+        "150m lagoon and 360° rooftop infinity pool",
+        "Steps from the Wynn resort site"
+      ],
+      "signals": [
+        {
+          "icon": "🦪",
+          "text": "Design",
+          "val": "Zaha Hadid Architects",
+          "cls": "rose"
+        },
+        {
+          "icon": "🏊",
+          "text": "Lagoon",
+          "val": "150m + rooftop pool",
+          "cls": "gold"
+        },
+        {
+          "icon": "🗓️",
+          "text": "Handover",
+          "val": "Q1 2029",
+          "cls": "gold"
+        },
+        {
+          "icon": "💰",
+          "text": "Entry Price",
+          "val": "AED 2.8M",
+          "cls": "up"
+        }
+      ],
+      "timeline": [
+        {
+          "y": "2025 Launch",
+          "p": 3300
+        },
+        {
+          "y": "Mid-2026",
+          "p": 3400,
+          "chg": "+3% (est.)",
+          "cur": true
+        }
+      ],
+      "units": [
+        {
+          "t": "1-BR",
+          "p": "from AED 2.8M"
+        },
+        {
+          "t": "2-BR",
+          "p": "from AED 4.7M"
+        },
+        {
+          "t": "3-BR",
+          "p": "from AED 7.9M"
+        },
+        {
+          "t": "Handover",
+          "p": "Q1 2029"
+        }
+      ],
+      "source_note": "From AED 2.8–2.9M (1BR ~850 sqft ≈ 3,300/sqft), 2BR 4.7M, 3BR 7.9M: gulftime.ae launch PR, proprain.com."
+    },
+    {
+      "id": "cala",
+      "name": "Cala Del Mar",
+      "type": "Waterfront Apartments",
+      "pinType": "apt",
+      "code": "CDM",
+      "lat": 25.691,
+      "lng": 55.73,
+      "island": "Island 4 – View (north-west beach)",
+      "developer": "Ellington Properties",
+      "launch": "2024",
+      "freehold": true,
+      "handover": "Q2 2027",
+      "launchP": 2600,
+      "curP": 2700,
+      "growth": "+4%",
+      "growthPct": 4,
+      "yoy": "+21% (island avg)",
+      "yield_": "6–8% (proj.)",
+      "yearsLive": 2,
+      "appreciation": "+4% since 2024 launch (est.)",
+      "cagr": "Launch phase — too early",
+      "supplyNote": "Launch pricing under verification with Ellington",
+      "drivers": [
+        "Ellington waterfront design",
+        "North-west beachfront on View Island",
+        "Q2 2027 handover — early delivery window"
+      ],
+      "signals": [
+        {
+          "icon": "🐚",
+          "text": "Entry Price",
+          "val": "AED 2.3M (verify)",
+          "cls": "gold"
+        },
+        {
+          "icon": "🗓️",
+          "text": "Handover",
+          "val": "Q2 2027",
+          "cls": "gold"
+        },
+        {
+          "icon": "🌊",
+          "text": "Rental Yield",
+          "val": "6–8% (proj.)",
+          "cls": "gold"
+        },
+        {
+          "icon": "📈",
+          "text": "Since Launch",
+          "val": "+4% (est.)",
+          "cls": "up"
+        }
+      ],
+      "timeline": [
+        {
+          "y": "2024 Launch",
+          "p": 2600
+        },
+        {
+          "y": "2025",
+          "p": 2650,
+          "chg": "+2% (est.)"
+        },
+        {
+          "y": "Mid-2026",
+          "p": 2700,
+          "chg": "+2% (est.)",
+          "cur": true
+        }
+      ],
+      "units": [
+        {
+          "t": "1-BR",
+          "p": "from AED 2.3M (verify)"
+        },
+        {
+          "t": "2-BR",
+          "p": "POA"
+        },
+        {
+          "t": "Penthouse",
+          "p": "POA"
+        },
+        {
+          "t": "Handover",
+          "p": "Q2 2027"
+        }
+      ],
+      "source_note": "Listed 2.3M/398 sqft (al-marjan-properties.com) computes implausibly high — treated as 1BR ~850 sqft ≈ 2,700/sqft. VERIFY with Ellington."
+    },
+    {
+      "id": "pacific",
+      "name": "Pacific",
+      "type": "Completed Community",
+      "pinType": "apt",
+      "code": "PAC",
+      "lat": 25.6869,
+      "lng": 55.7323,
+      "island": "Island 4 – View (west)",
+      "developer": "Select Group",
+      "launch": "2016",
+      "freehold": true,
+      "handover": "Completed 2021",
+      "launchP": 700,
+      "curP": 1650,
+      "growth": "+136%",
+      "growthPct": 136,
+      "yoy": "+15–20% (est.)",
+      "yield_": "5.5–5.8%",
+      "yearsLive": 10,
+      "appreciation": "AED 700 → 1,650/sqft since 2016 (est.)",
+      "cagr": "~9% annualised (est.)",
+      "supplyNote": "6 buildings, 1,400 units · studios–2BR, 445–1,650 sqft",
+      "drivers": [
+        "Only large completed apartment stock on the island",
+        "Immediate rental income — no handover wait",
+        "Direct beneficiary of Wynn short-stay demand"
+      ],
+      "signals": [
+        {
+          "icon": "✅",
+          "text": "Status",
+          "val": "Completed 2021",
+          "cls": "gold"
+        },
+        {
+          "icon": "📈",
+          "text": "Since 2016 Launch",
+          "val": "+136% (est.)",
+          "cls": "up"
+        },
+        {
+          "icon": "🏠",
+          "text": "Rental Yield",
+          "val": "5.5–5.8% actual",
+          "cls": "gold"
+        },
+        {
+          "icon": "🔑",
+          "text": "Holiday-Let",
+          "val": "Strong STR demand",
+          "cls": "gold"
+        }
+      ],
+      "timeline": [
+        {
+          "y": "2016 Launch",
+          "p": 700
+        },
+        {
+          "y": "2021 Handover",
+          "p": 900,
+          "chg": "+29% (est.)"
+        },
+        {
+          "y": "2022 Wynn news",
+          "p": 1050,
+          "chg": "+17% (est.)"
+        },
+        {
+          "y": "2024",
+          "p": 1400,
+          "chg": "+33% (est.)"
+        },
+        {
+          "y": "Mid-2026",
+          "p": 1650,
+          "chg": "+18% (est.)",
+          "cur": true
+        }
+      ],
+      "units": [
+        {
+          "t": "Studio resale",
+          "p": "AED 700K–1.1M"
+        },
+        {
+          "t": "1-BR resale",
+          "p": "AED 1.0–1.6M (est.)"
+        },
+        {
+          "t": "2-BR resale",
+          "p": "AED 1.6–3M (est.)"
+        },
+        {
+          "t": "Yield",
+          "p": "5.5–5.8% actual"
+        }
+      ],
+      "source_note": "Resale ranges: Bayut/Property Finder listings Jul 2026; yields: Totality Estates 2025-26. PSF series estimated — no published index."
+    },
+    {
+      "id": "babalbahr",
+      "name": "Bab Al Bahr",
+      "type": "Completed Community",
+      "pinType": "apt",
+      "code": "BAB",
+      "lat": 25.6633,
+      "lng": 55.7492,
+      "island": "Island 1 – Breeze",
+      "developer": "Al Hamra",
+      "launch": "2013",
+      "freehold": true,
+      "handover": "Completed 2015",
+      "launchP": 850,
+      "curP": 1350,
+      "growth": "+59%",
+      "growthPct": 59,
+      "yoy": "+15% (est.)",
+      "yield_": "~4.6%",
+      "yearsLive": 13,
+      "appreciation": "AED 850 → 1,350/sqft since 2013 (est.)",
+      "cagr": "~3.6% annualised (est.)",
+      "supplyNote": "~287 live resale listings (Jul 2026) · completed 2015",
+      "drivers": [
+        "Established community with Rixos beach access",
+        "Lowest entry prices on the island",
+        "Value re-rating as the Wynn opening nears"
+      ],
+      "signals": [
+        {
+          "icon": "✅",
+          "text": "Status",
+          "val": "Completed 2015",
+          "cls": "gold"
+        },
+        {
+          "icon": "🏖️",
+          "text": "Rixos Beach Access",
+          "val": "Resort living",
+          "cls": "gold"
+        },
+        {
+          "icon": "🏠",
+          "text": "Rental Yield",
+          "val": "~4.6%",
+          "cls": "gold"
+        },
+        {
+          "icon": "📈",
+          "text": "Since Wynn News",
+          "val": "+42% (est.)",
+          "cls": "up"
+        }
+      ],
+      "timeline": [
+        {
+          "y": "2013 Launch",
+          "p": 850
+        },
+        {
+          "y": "2015 Handover",
+          "p": 900,
+          "chg": "+6% (est.)"
+        },
+        {
+          "y": "2019",
+          "p": 800,
+          "chg": "-11% (est.)"
+        },
+        {
+          "y": "2022 Wynn news",
+          "p": 950,
+          "chg": "+19% (est.)"
+        },
+        {
+          "y": "2024",
+          "p": 1150,
+          "chg": "+21% (est.)"
+        },
+        {
+          "y": "Mid-2026",
+          "p": 1350,
+          "chg": "+17% (est.)",
+          "cur": true
+        }
+      ],
+      "units": [
+        {
+          "t": "Studio resale",
+          "p": "AED 550K–900K (est.)"
+        },
+        {
+          "t": "1-BR resale",
+          "p": "AED 0.9–1.5M (est.)"
+        },
+        {
+          "t": "2-BR resale",
+          "p": "AED 1.5–2.5M"
+        },
+        {
+          "t": "Yield",
+          "p": "~4.6%"
+        }
+      ],
+      "source_note": "Resale ~AED 1,100–1,600/sqft and ~4.6% yield: Metropolitan / Property Finder listings Jul 2026. Historic psf series estimated."
+    },
+    {
+      "id": "danah",
+      "name": "Danah Bay",
+      "type": "Villa & Townhouse Community",
+      "pinType": "villa",
+      "code": "DNB",
+      "lat": 25.698,
+      "lng": 55.7428,
+      "island": "Island 4 – View (breakwater & north-east)",
+      "developer": "Dubai Investments",
+      "launch": "2021",
+      "freehold": true,
+      "handover": "Completed 2024–2026",
+      "launchP": 800,
+      "curP": 1090,
+      "growth": "+36%",
+      "growthPct": 36,
+      "yoy": "+11% (est.)",
+      "yield_": "5–7% (est.)",
+      "yearsLive": 5,
+      "appreciation": "AED 800 → 1,090/sqft since 2021 (est.)",
+      "cagr": "~6.4% annualised (est.)",
+      "supplyNote": "189 villas & townhouses delivered · 18 breakwater seafront villas",
+      "drivers": [
+        "Only completed villa/townhouse stock on the island",
+        "189 villas fully delivered by June 2026",
+        "Beachfront plus breakwater seafront villas"
+      ],
+      "signals": [
+        {
+          "icon": "🏡",
+          "text": "Villas Delivered",
+          "val": "189 (June 2026)",
+          "cls": "gold"
+        },
+        {
+          "icon": "📈",
+          "text": "Since 2021 Launch",
+          "val": "+36% (est.)",
+          "cls": "up"
+        },
+        {
+          "icon": "🏖️",
+          "text": "Breakwater Villas",
+          "val": "18 seafront",
+          "cls": "rose"
+        },
+        {
+          "icon": "🌊",
+          "text": "Rental Yield",
+          "val": "5–7% (est.)",
+          "cls": "gold"
+        }
+      ],
+      "timeline": [
+        {
+          "y": "2021 Launch",
+          "p": 800
+        },
+        {
+          "y": "2022 Wynn news",
+          "p": 880,
+          "chg": "+10% (est.)"
+        },
+        {
+          "y": "2024 Phase 1 handover",
+          "p": 980,
+          "chg": "+11% (est.)"
+        },
+        {
+          "y": "Mid-2026",
+          "p": 1090,
+          "chg": "+11% (est.)",
+          "cur": true
+        }
+      ],
+      "units": [
+        {
+          "t": "2-BR TH",
+          "p": "from AED 2.7M (2,472 sqft)"
+        },
+        {
+          "t": "3–4BR Villa",
+          "p": "POA"
+        },
+        {
+          "t": "Breakwater Villa",
+          "p": "18 units"
+        },
+        {
+          "t": "Plan",
+          "p": "60/40"
+        }
+      ],
+      "source_note": "2BR TH 2,472 sqft from AED 2.7M ≈ 1,090/sqft: opr.ae. Full handover June 2026: Dubai Investments PR / Zawya. Launch psf estimated."
+    }
+  ]
+}
