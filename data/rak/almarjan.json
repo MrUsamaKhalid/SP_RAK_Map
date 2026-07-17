@@ -54,6 +54,7 @@
       "launch": "2023",
       "freehold": true,
       "handover": "Opening early 2027",
+      "opening_target": "2027-03-01",
       "launchP": 3000,
       "curP": 4800,
       "growth": "+60%",
