@@ -11,6 +11,8 @@ permissions:
 jobs:
   fx:
     runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
     steps:
       - uses: actions/checkout@v4
       - name: Fetch FX rates (AED base)
@@ -42,6 +44,14 @@ jobs:
             git push
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
-      - name: Mirror to gh-pages (live branch)
-        if: steps.commit.outputs.changed == 'true'
-        run: git push origin HEAD:gh-pages
+
+  deploy:
+    # Redeploy when the rates changed. A manual run always redeploys, so the
+    # whole path can be tested on demand.
+    needs: fx
+    if: needs.fx.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/pages.yml

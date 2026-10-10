@@ -46,8 +46,8 @@ Wynn Resort District · Oceano (Luxe) · Nikki Beach & Rosso Bay (Aldar) · Addr
 
 1. Edit `data/rak/almarjan.json` (new VPI print, updated psf, new launches/handovers). Keep the inline `const AREAS = [...]` fallback in `index.html` in sync (copy the `zones` array across) — the page warns of nothing if they drift, the fallback is only used without a web server.
 2. Test locally: `python3 -m http.server` and open `http://localhost:8000`.
-3. Push to a `test-data` branch and verify the Pages preview/test flow.
-4. Promote to `main` only after verification — **live GitHub Pages deploys from `main`** (`.github/workflows/pages.yml`).
+3. Review on a separate branch if you want a check before going live. Nothing outside the default branch is published.
+4. Push to the default branch `claude/new-session-4252nf`. **Live GitHub Pages deploys from the default branch on every push** (`.github/workflows/pages.yml`). Check the Actions run, then the live page.
 
 ## Repository layout
 
@@ -55,7 +55,8 @@ Wynn Resort District · Oceano (Luxe) · Nikki Beach & Rosso Bay (Aldar) · Addr
 index.html                      the entire app
 data/rak/almarjan.json          master curated dataset
 docs/reference/                 Al Marjan land map (developer/plot reference)
-.github/workflows/pages.yml     GitHub Pages deploy (on push to main)
+.github/workflows/pages.yml     GitHub Pages deploy (on push to the default branch)
+.github/workflows/live-data.yml daily FX bake into data/live/fx.json, then redeploy
 ```
 
 ---
