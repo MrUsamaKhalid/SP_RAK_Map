@@ -18,7 +18,7 @@ index.html               ←  single-file frontend (vanilla JS + Leaflet), clone
                             fetch is unavailable (e.g. opened from disk).
 ```
 
-- No build tools, no npm dependencies. External resources: Google Fonts, Leaflet 1.9.4 + leaflet.heat (unpkg), CARTO basemap tiles.
+- No build tools, no npm dependencies. External resources: Google Fonts, Leaflet 1.9.4 + leaflet.heat (unpkg), MapLibre GL 5.24.0 + maplibre-gl-leaflet 0.1.4 (unpkg) drawing the OpenFreeMap vector basemap (Positron in light mode, Dark in dark mode; no API key).
 - `window.rakData` exposes `citywide`, `zones`, and `getZone(slug)` in the console.
 
 ## The data contract (`data/rak/almarjan.json`)
